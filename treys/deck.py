@@ -1,5 +1,5 @@
 from random import shuffle as rshuffle
-from random import choices
+from random import sample as rsample
 from .card import Card
 
 
@@ -29,7 +29,7 @@ class Deck:
         return cards
 
     def sample(self, n):
-        return choices(self.cards, k=n)
+        return rsample(self.cards, k=n)
 
     def __str__(self):
         return Card.print_pretty_cards(self.cards)
