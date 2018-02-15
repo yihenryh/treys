@@ -27,6 +27,9 @@ class Deck:
             cards.append(self.draw())
         return cards
 
+    def sample(self, n):
+        return random.choices(self.cards, k=n)
+
     def __str__(self):
         return Card.print_pretty_cards(self.cards)
 
