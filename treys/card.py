@@ -72,6 +72,10 @@ class Card:
         return bitrank | suit | rank | rank_prime
 
     @staticmethod
+    def news(strings):
+        return [Card.new(s) for s in strings]
+
+    @staticmethod
     def int_to_str(card_int):
         rank_int = Card.get_rank_int(card_int)
         suit_int = Card.get_suit_int(card_int)
